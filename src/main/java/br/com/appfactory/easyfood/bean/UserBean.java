@@ -23,7 +23,7 @@ import br.com.appfactory.easyfood.model.UserModel;
 
 @Stateless
 @WebService
-public class ProductBean {
+public class UserBean {
 
 	@Inject
 	private UserDao userDao;
