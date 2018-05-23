@@ -39,7 +39,7 @@ public class UserBean {
 
 		validateModel(userModel);
 		if (userDao.findByLogin(login).isPresent()) {
-			throw new EasyFoodException("User already registered. Please try another user name.");
+			throw new EasyFoodException("User already registered. Please try to enter another user name.");
 		}
 
 		User user = converter.create(userModel);
