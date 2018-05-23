@@ -33,13 +33,12 @@ public class UserBean {
 
 	@WebMethod
 	@WebResult(name = "User")
-	public User create(@WebParam(name = "login") String login, @WebParam(name = "password") String pass)
+	public User create(@WebParam(name = "login") String login, @WebParam(name = "passphrase") String pass)
 			throws EasyFoodException {
 		UserModel userModel = new UserModel(login, pass);
 
 		validateModel(userModel);
 		if (userDao.findByLogin(login).isPresent()) {
-
 			throw new EasyFoodException("User already registered. Please try to enter another user name.");
 		}
 
