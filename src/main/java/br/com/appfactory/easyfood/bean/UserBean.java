@@ -33,7 +33,7 @@ public class UserBean {
 
 	@WebMethod
 	@WebResult(name = "User")
-	public User create(@WebParam(name = "login") String login, @WebParam(name = "passphrase") String pass)
+	public User create(@WebParam(name = "login") String login, @WebParam(name = "password") String pass)
 			throws EasyFoodException {
 		UserModel userModel = new UserModel(login, pass);
 
